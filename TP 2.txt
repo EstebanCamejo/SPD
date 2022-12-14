@@ -229,17 +229,10 @@ void compararPass (int contador)			// compara si el pass ingresado y enciende lo
       contador = 0;	
       digitalWrite(LEDVERDE,LOW);
       if (contador <= 5){
-          
-          if (contador == 1 || contador == 3 || contador == 5 ) 
-          {
-              digitalWrite(LEDROJO,LOW);
+       
+	digitalWrite(LEDROJO,HIGH);
               contador++;
-          }
-          else if (contador == 0 || contador == 2 || contador == 4 )
-          { 
-              digitalWrite(LEDROJO,HIGH);
-              contador++;
-          }
+        }
       }
       else if (contador >= 6)
       {
@@ -254,17 +247,10 @@ void compararPass (int contador)			// compara si el pass ingresado y enciende lo
       contador = 0; // iniciamos el contador para que parpadee el led
       digitalWrite(LEDROJO,LOW);
       if (contador <= 5){
-          
-          if (contador == 1 || contador == 3 || contador == 5)
-          {
-              digitalWrite(LEDVERDE,LOW);
-              contador++;
-          }
-          else if (contador == 0 || contador == 2 || contador == 4)
-          { 
+        
               digitalWrite(LEDVERDE,HIGH);
               contador++;
-          }
+          
           
       }
       else if (contador >= 6) // una vez que pasan los egundos se reinicia
