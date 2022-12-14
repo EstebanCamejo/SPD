@@ -11,8 +11,6 @@ https://www.tinkercad.com/things/8uklFeq9tg8?sharecode=T_6bDL1zA9kAIDF9nZTjDUGoC
 
 
 
-
-
 /******************************************************************************
 
 Welcome to GDB Online.
@@ -229,10 +227,11 @@ void compararPass (int contador)			// compara si el pass ingresado y enciende lo
       contador = 0;	
       digitalWrite(LEDVERDE,LOW);
       if (contador <= 5){
-       
-	digitalWrite(LEDROJO,HIGH);
+          
+        
+              digitalWrite(LEDROJO,HIGH);
               contador++;
-        }
+          
       }
       else if (contador >= 6)
       {
@@ -247,7 +246,8 @@ void compararPass (int contador)			// compara si el pass ingresado y enciende lo
       contador = 0; // iniciamos el contador para que parpadee el led
       digitalWrite(LEDROJO,LOW);
       if (contador <= 5){
-        
+          
+       
               digitalWrite(LEDVERDE,HIGH);
               contador++;
           
@@ -275,5 +275,6 @@ void resetear ()			// chequear si se resetea el circuito
   digitalWrite(LEDROJO,LOW);
   digitalWrite(LEDVERDE,LOW);
 };
+
 
 
